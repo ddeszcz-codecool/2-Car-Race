@@ -1,5 +1,8 @@
 package main.java.com.codecool.car_race;
 
+import main.java.com.codecool.car_race.vehicles.Car;
+import main.java.com.codecool.car_race.vehicles.Vehicle;
+
 public class Race {
 
     /**
@@ -18,4 +21,6 @@ public class Race {
         System.out.println("Race results");
     }
 
+    public void registerRacer(Vehicle vehicle) {
+    }
 }
