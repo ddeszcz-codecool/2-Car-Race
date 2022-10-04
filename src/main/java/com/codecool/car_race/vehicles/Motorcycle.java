@@ -13,7 +13,7 @@ public class Motorcycle extends Vehicle{
 
     private static int motorcycleNumber = 1;
     @Override
-    void prepareForLap(Race race) {
+    public void prepareForLap(Race race) {
         actualSpeed = normalSpeed;
 
         if (race.isRaining()) {

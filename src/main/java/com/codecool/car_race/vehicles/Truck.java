@@ -16,7 +16,7 @@ public class Truck extends Vehicle{
     }
 
     @Override
-    void prepareForLap(Race race) {
+    public void prepareForLap(Race race) {
         if (isBrokenDown()) actualSpeed = 0;
         else actualSpeed = NORMAL_SPEED;
 
@@ -61,6 +61,8 @@ public class Truck extends Vehicle{
         return State.OPERATIONAL;
 
         }
+
+
 
 
 

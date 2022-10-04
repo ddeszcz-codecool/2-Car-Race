@@ -1,12 +1,15 @@
 package main.java.com.codecool.car_race;
 
 import main.java.com.codecool.car_race.vehicles.Car;
+import main.java.com.codecool.car_race.vehicles.Truck;
 import main.java.com.codecool.car_race.vehicles.Vehicle;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class Race {
+
+    private boolean brokenTruck;
 
     static final int NUM_OF_LAPS = 50;
 
@@ -27,7 +30,7 @@ public class Race {
 
             // change weather and update broken truck status after the movement done
             weather.randomize();
-            // TODO: check if a yellow flag should be active
+            brokenTruck = getBrokenTruckStatus();
         }
 
     }
@@ -50,6 +53,23 @@ public class Race {
 
     public boolean isRaining() {
         return weather.isRaining();
+    }
+
+    public boolean isYellowFlagActive() {
+        return brokenTruck;
+    }
+
+
+    private boolean getBrokenTruckStatus() {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle instanceof Truck) {
+                Truck truck = (Truck) vehicle;
+                if (truck.isBrokenDown()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }
