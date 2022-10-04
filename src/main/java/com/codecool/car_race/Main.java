@@ -1,4 +1,4 @@
-package com.codecool.car_race;
+package main.java.com.codecool.car_race;
 
 
 public class Main {

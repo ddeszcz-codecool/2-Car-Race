@@ -1,4 +1,4 @@
-package com.codecool.car_race;
+package main.java.com.codecool.car_race;
 
 public class Race {
 
@@ -7,6 +7,7 @@ public class Race {
      * moving the vehicles for the duration of a whole race.
      */
     public void simulateRace() {
+        //TODO: implement
     }
 
     /**
@@ -14,6 +15,7 @@ public class Race {
      * race.
      */
     public void printRaceResults() {
+        System.out.println("Race results");
     }
 
 }
