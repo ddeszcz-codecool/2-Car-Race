@@ -5,6 +5,8 @@ import main.java.com.codecool.car_race.util.RandomHelper;
 
 public class Car extends Vehicle{
 
+    protected static final int YELLOW_FLAG_SPEED = 75;
+
     public Car(){
         super(calculateNormalSpeed());
     }
@@ -26,7 +28,10 @@ public class Car extends Vehicle{
             "Gallop"
     };
     @Override
-    void prepareForLap(Race race) {
+    public void prepareForLap(Race race) {
+        if(race.isYellowFlagActive()) actualSpeed = YELLOW_FLAG_SPEED;
+        else actualSpeed = normalSpeed;
+
 
     }
 

@@ -18,10 +18,10 @@ public abstract class Vehicle {
         this.normalSpeed = normalSpeed;
     }
 
-    abstract void prepareForLap(Race race);
+    public abstract void prepareForLap(Race race);
     protected abstract String generateName();
 
-    private void moveForAnHour(){
+    public void moveForAnHour(){
 
     }
 
