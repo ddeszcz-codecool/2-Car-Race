@@ -13,9 +13,9 @@ public abstract class Vehicle {
     protected int actualSpeed;
     protected int distanceTravelled;
 
-    protected Vehicle(){
+    protected Vehicle(int normalSpeed){
         this.name = generateName();
-        this.normalSpeed = 100;
+        this.normalSpeed = normalSpeed;
     }
 
     abstract void prepareForLap(Race race);
@@ -36,6 +36,9 @@ public abstract class Vehicle {
                 .append(", ")
                 .append("name: ")
                 .append(name)
+                .append(", ")
+                .append("Normal Speed: ")
+                .append(normalSpeed)
                 .append("}");
         return sb.toString();
     }

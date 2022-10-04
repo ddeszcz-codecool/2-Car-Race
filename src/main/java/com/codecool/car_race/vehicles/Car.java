@@ -5,6 +5,14 @@ import main.java.com.codecool.car_race.util.RandomHelper;
 
 public class Car extends Vehicle{
 
+    public Car(){
+        super(calculateNormalSpeed());
+    }
+
+    private static int calculateNormalSpeed() {
+        return RandomHelper.nextInt(80, 110+1);
+    }
+
     private static final String[] POSSIBLE_NAMES = {
             "Epiphany",
             "Parallel",

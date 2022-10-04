@@ -13,6 +13,11 @@ public class RandomHelper {
         return random.nextInt(upper);
     }
 
+    public static int nextInt(int lower, int upper) {
+        Random random = new Random();
+        return lower + random.nextInt(upper - lower);
+    }
+
     public static String chooseOne(String[] possibilities) {
         if (possibilities == null || possibilities.length < 1) {
             final String msg =
