@@ -16,9 +16,7 @@ public abstract class Vehicle {
     protected Vehicle(){
         this.name = "Vehicle";
         this.normalSpeed = 100;
-
     }
-
 
     abstract void prepareForLap(Race race);
 
@@ -26,4 +24,18 @@ public abstract class Vehicle {
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{")
+                .append("distance travelled: ")
+                .append(distanceTravelled)
+                .append(", ")
+                .append("type: ")
+                .append(getClass().getSimpleName())
+                .append(", ")
+                .append("name: ")
+                .append(name)
+                .append("}");
+        return sb.toString();
+    }
 }
