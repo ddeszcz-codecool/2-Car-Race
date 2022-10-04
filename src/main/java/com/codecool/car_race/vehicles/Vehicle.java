@@ -14,11 +14,12 @@ public abstract class Vehicle {
     protected int distanceTravelled;
 
     protected Vehicle(){
-        this.name = "Vehicle";
+        this.name = generateName();
         this.normalSpeed = 100;
     }
 
     abstract void prepareForLap(Race race);
+    protected abstract String generateName();
 
     private void moveForAnHour(){
 
