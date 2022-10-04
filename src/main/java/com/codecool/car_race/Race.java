@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Race {
 
+    static final int NUM_OF_LAPS = 50;
+
     private Weather weather = new Weather();
 
     private final List<Vehicle> vehicles = new LinkedList<>();
@@ -17,7 +19,17 @@ public class Race {
      * moving the vehicles for the duration of a whole race.
      */
     public void simulateRace() {
-        //TODO: implement
+        for (int i = 0; i < NUM_OF_LAPS; i++) {
+            for (Vehicle vehicle : vehicles) {
+                vehicle.prepareForLap(this);
+                vehicle.moveForAnHour();
+            }
+
+            // change weather and update broken truck status after the movement done
+            weather.randomize();
+            // TODO: check if a yellow flag should be active
+        }
+
     }
 
     /**
