@@ -24,6 +24,9 @@ public class Race {
      */
     public void printRaceResults() {
         System.out.println("Race results");
+        for (Vehicle vehicle:vehicles) {
+            System.out.println(vehicle);
+        }
     }
 
     public void registerRacer(Vehicle racer) {
