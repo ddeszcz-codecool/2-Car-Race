@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Race {
 
+    private Weather weather = new Weather();
+
     private final List<Vehicle> vehicles = new LinkedList<>();
 
     /**
@@ -33,5 +35,9 @@ public class Race {
         vehicles.add(racer);
     }
 
+
+    public boolean isRaining() {
+        return weather.isRaining();
+    }
 
 }

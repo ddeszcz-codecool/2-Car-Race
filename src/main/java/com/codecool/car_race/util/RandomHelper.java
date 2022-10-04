@@ -26,4 +26,9 @@ public class RandomHelper {
         }
         return possibilities[nextInt(possibilities.length)];
     }
+
+    public static boolean eventWithChance(int chance) {
+        return RANDOM.nextInt(100) < chance;
+    }
+
 }
