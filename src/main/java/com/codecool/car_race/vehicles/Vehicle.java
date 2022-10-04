@@ -13,17 +13,33 @@ public abstract class Vehicle {
     protected int actualSpeed;
     protected int distanceTravelled;
 
-    protected Vehicle(){
-        this.name = "Vehicle";
-        this.normalSpeed = 100;
-
+    protected Vehicle(int normalSpeed){
+        this.name = generateName();
+        this.normalSpeed = normalSpeed;
     }
 
-
     abstract void prepareForLap(Race race);
+    protected abstract String generateName();
 
     private void moveForAnHour(){
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{")
+                .append("distance travelled: ")
+                .append(distanceTravelled)
+                .append(", ")
+                .append("type: ")
+                .append(getClass().getSimpleName())
+                .append(", ")
+                .append("name: ")
+                .append(name)
+                .append(", ")
+                .append("Normal Speed: ")
+                .append(normalSpeed)
+                .append("}");
+        return sb.toString();
+    }
 }
